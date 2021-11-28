@@ -12,7 +12,7 @@
 }
 
 header{
-    background: #212529;
+    background: #343a40;
     padding:10px 0;
 }
 
@@ -26,7 +26,7 @@ header{
 }
 
 header #logo{
-    background: red;
+    font-family: pacifico, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #img_profile{
@@ -57,11 +57,16 @@ header #logo{
 }
 
 .cartas img{
-    margin: 0px 80px;
+    margin: 20px 80px;
 }
 
 .cartas{
     text-align: center;
+}
+
+.cartas:hover{
+    box-shadow: 1px 2px 7px rgb(192, 191, 191);
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 1200px) {

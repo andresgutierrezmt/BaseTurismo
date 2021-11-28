@@ -43,12 +43,12 @@
                 <p>Base de datos usuarios, conocer acerca de la tabla clientes</p>
                 <img src="img/db.png" alt="Loading error" width="150px">
             </div>
-            <div class="col-sm-4 cartas" data-toggle="modal" data-target="#myModal">
+            <div class="col-sm-4 cartas" data-toggle="modal" data-target="#registro">
                 <h3>Registro cliente</h3>
                 <p>Registrar un nuevo cliente desde la pagina web</p>
                 <img src="img/user.png" alt="Loading error" width="150px">
             </div>
-            <div class="col-sm-4 cartas">
+            <div class="col-sm-4 cartas" data-toggle="modal" data-target="#consulta">
                 <h3>Consultar cliente</h3>
                 <p>Ver perfil del cliente</p>
                 <img src="img/perfil.png" alt="Loading error" width="150px">
@@ -57,25 +57,97 @@
     </div>
 </body>
 
-<!-- The Modal -->
-<div class="modal" id="myModal">
+<!-- Registro usuarios -->
+<div class="modal fade" id="registro">
     <div class="modal-dialog">
         <div class="modal-content">
-        <!-- Modal Header -->
+        <!-- titulo formulario -->
         <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
+            <h4 class="modal-title">Formulario registro</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
-        <!-- Modal body -->
+        <!-- Formulario -->
         <div class="modal-body">
-            Modal body..
+            <form action="/action_page.php" class="was-validated">
+                <div class="form-group">
+                    <label for="cedula">cedula</label>
+                    <input type="number" class="form-control" id="cedula" placeholder="Ingresar cedula" name="cedula" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group">
+                    <label for="pensionado">Pensionado</label>
+                    <input type="text" class="form-control" id="pensionado" placeholder="pensionado?" name="pensionado" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group">
+                    <label for="eps">EPS</label>
+                    <input type="text" class="form-control" id="eps" placeholder="ingrese la eps" name="eps" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember" required> Estoy deacuerdo con T y C.
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+                </label>
+                </div>
         </div>
-        <!-- Modal footer -->
+        <!-- opciones -->
         <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
         </div>
         </div>
     </div>
 </div>
+
+<!-- consultar usuarios -->
+<div class="modal fade" id="consulta">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <!-- titulo formulario -->
+        <div class="modal-header">
+            <h4 class="modal-title">Consultar usuarios</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Formulario -->
+        <div class="modal-body">
+            <form action="/action_page.php" class="was-validated">
+                <div class="form-group">
+                    <label for="cedula">cedula</label>
+                    <input type="number" class="form-control" id="cedula" placeholder="Ingresar cedula" name="cedula" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+                </div>
+        </div>
+        <!-- opciones -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">consultar</button>
+        </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+<footer id="pie_de_pagina">
+    TurismoWEB Desarrollada por Cristian Ayala | copyright (c) todos los derechos reservados
+</footer>
 
 </html>
